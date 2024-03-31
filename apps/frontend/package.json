@@ -9,6 +9,7 @@
     "lint": "eslint . --max-warnings 0"
   },
   "dependencies": {
+    "@material-tailwind/react": "^2.1.9",
     "@repo/ui": "*",
     "next": "14.1.4",
     "prettier": "^3.2.5",
