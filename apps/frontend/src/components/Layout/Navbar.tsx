@@ -1,28 +1,29 @@
-'use client';
-
 import React, { FC } from 'react';
 import { Roboto } from 'next/font/google';
-import { Button } from '@material-tailwind/react';
+import Image from 'next/image';
 
 const robotoMedium = Roboto({ weight: '500', subsets: ['latin'] });
 
 const Navbar: FC = () => {
   return (
-    <div className="flex px-5 h-16 w-full">
-      <Button
-        className="ml-auto"
-        variant="text"
-        size="md"
-        placeholder=""
-        onPointerEnterCapture={null}
-        onPointerLeaveCapture={null}
-      >
-        LOGIN
-      </Button>
-      <div
-        className={`${robotoMedium.className} text-darkCyan ml-auto flex items-center cursor-pointer`}
-      ></div>
-    </div>
+    <>
+      <div className="flex items-center justify-between px-5 h-16 w-full">
+        <Image
+          alt="Planner App Logo"
+          // className={styles.vercelLogo}
+          height={70}
+          priority
+          src="/planner-logo.png"
+          width={100}
+        />
+        <div className="bg-darkCyan"></div>
+        <button
+          className={`bg-darkCyan text-floralWhite hover:bg-opacity-80 ${robotoMedium.className} rounded-3xl px-3 py-2`}
+        >
+          Get Started
+        </button>
+      </div>
+    </>
   );
 };
 
